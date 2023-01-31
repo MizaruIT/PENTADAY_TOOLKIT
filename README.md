@@ -3,6 +3,7 @@
 * [🛠 Installation](#installation)
 * [💻 Getting started](#getting-started)
 	* [Usage of scanners](#usage-scanners)
+	* [Usage of scanners](#usage-poc)
 	* [Structure of the project](#structure-project)
 * [🔭 Roadmap](#roadmap)
 * [👥 Contact](#contact)
@@ -673,7 +674,7 @@ The project has the following structure once it is cloned.
 ## 👥 Contact <a name="contact"/>
 - Twitter: @MizaruIT (https://twitter.com/MizaruIT)
 - GitHub: @MizaruIT (https://github.com/MizaruIT)
-- Project Link: https://github.com/MizaruIT/PENTADAY_BASH
+- Project Link: https://github.com/MizaruIT/PENTAD-TOOLKIT
 
 ## 🤝 Contributing <a name="contributing"/>
 Contributions, issues, and feature requests are welcome!
